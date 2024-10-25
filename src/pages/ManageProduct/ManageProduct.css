@@ -1,0 +1,133 @@
+.page{
+    float: right;
+    width: 90%;
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+.container {
+    padding: 20px;
+}
+/* 4 nút */
+.productbtn-list{
+    display: flex;
+    justify-content: left;
+}
+/* từng nút */
+.productbtn-item{
+    width: 200px;
+    height: 70px;
+    margin-right: 15px;
+    color: #455068 !important;
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-top: 5px;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+}
+.productbtn-item:hover{
+    filter: brightness(0.8);
+}
+
+.btn1{
+    background-color: #FBDC5C;
+    border: 1.5px solid #CE7100 !important;
+}
+.btn2{
+    background-color: #FEAEAE;
+    border: 1.5px solid #F64669 !important;
+}
+.btn3{
+    background-color: #D3DFE7;
+    border: 1.5px solid #798AA3 !important;
+}
+.btn4{
+    background-color: #A9F4D0;
+    border: 1.5px solid #798AA3 !important;
+}
+.btn5{
+    background-color: #FEAEAE;
+    border: 1.5px solid #798AA3 !important;
+}
+
+.btn1 > h1,
+.btn2 > h1,
+.btn3 > h1,
+.btn4 > h1,
+.btn5 > h1{
+    font-size: 2.9rem;
+    margin-top: -10px;
+}
+
+.btn1 > h1{
+    color: #602400;
+}
+.btn2 > h1{
+    color: #A3072B;
+}
+.btn3 > h1{
+    color: #2E3748;
+}
+
+/* thanh tìm kiếm */
+.product-search_list{
+    margin-top: 3px;
+    margin-left: -7px;
+    color: #757B82;
+    font-weight: 500;
+    display: flex;
+    justify-content: left;
+}
+/* từng thanh tìm kiếm */
+.product-search_item{
+    width: 300px;
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    transition: all 0.5s ease;
+}
+
+.product-search_item__flex{
+    display: flex;
+    align-items: center;
+}
+
+.product-search_item__flex > select,
+.product-search_item__flex > input{
+    padding-left: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.077);
+    margin-top: 5px;
+    height: 40px;
+    font-size: 1.6rem;
+    color: #9EA3A7;
+    z-index: 10;
+}
+/* nút tìm kiếm */
+.product-search_item__btn{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 2.3rem;
+    width: 47px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #28B95E;
+    box-shadow: 0 2px 3px #01792d;
+    z-index: 1000;
+}
+/* nút thêm sản phẩm */
+.product-search_btnadd{
+    background-color: #5065F6;
+    color: white;
+    font-size: 1.6rem;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px #061ba5;
+    margin-top: 39px;
+    margin-left: 130px;
+}
+

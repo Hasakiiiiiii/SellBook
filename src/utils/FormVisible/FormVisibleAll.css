@@ -1,0 +1,747 @@
+/** Thêm sản phẩm mới  */
+.bg_black{
+    background-color: #00000088;
+    width: 240vh;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    z-index: 99999999;
+}
+/* khung thêm sản phẩm */
+.addnewbook{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 700px;
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 1000px;
+    transform: translate(-63%);
+    animation: identifier .5s ease-in-out forwards;
+}
+/*tiêu đề  */
+.addnewbook-header{
+    display: flex;
+    justify-content: space-between;
+    color: #6a6969be;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.438);
+}
+.addnewbook-header > div{
+    display: flex;
+}
+.addnewbook-header span{
+    margin-left: 20px;
+    padding: 1px 12px;
+    border-radius: 25px;
+    font-size: 1.4rem;
+}
+.conhang{
+    color: white;
+    background-color: rgb(51, 165, 95);
+}
+.hethang{
+    color: white;
+    background-color: #F7755F;
+}
+.dangyeucau{
+    color: black;
+    background-color: rgb(212, 221, 114);
+}
+.huy{
+    color: white;
+    background-color: rgb(198, 97, 112);
+}
+.khoa{
+    color: white;
+    background-color: rgba(182, 18, 18, 0.863);
+}
+.faXmark{
+    font-size: 2rem;
+    margin-top: 3px;
+}
+
+/* * form */
+.addnewbook-form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.addnewbook-form_img{
+    width: 32%;
+    height: 390px;
+    object-fit: cover;
+    border: 1.5px solid #ccc;
+    
+}
+.addnewbook-form_img img{
+    width: 100%;
+    height: 100%;
+}
+.btnCheckBorder-success{
+    border: 2px solid #2f9461 !important;
+}
+.btnCheckBorder-fail{
+    border: 2px solid #cd3636 !important;
+}
+.btnCheckBorder-default{
+    border: 1px solid #ccc;
+}
+.addnewbook-form_img span{
+    color: red;
+    font-size: 1.2rem;
+    margin-left: 65px;
+}
+.custom-file-input {
+    display: inline-block;
+    background-color: white; /* Màu nền đỏ */
+    color: gray; /* Chữ trắng */
+    padding: 8px 20px; /* Khoảng cách bên trong */
+    border-radius: 18px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ kiểu click */
+    font-size: 1.2rem; /* Kích thước chữ */
+    text-align: center; /* Căn giữa chữ */
+    border: 1px  solid gray; /* Loại bỏ viền mặc định */
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.custom-file-input:hover {
+    background-color: rgb(225, 225, 225); /* Màu khi hover */
+}
+
+.custom-file-input:active {
+    background-color: rgb(225, 225, 225); /* Màu khi click */
+}
+
+.addnewbook-form_img input{
+    position: absolute;
+    bottom: 195px;
+    left: 108px;
+    padding: 5px 12px;
+    font-size: 1.3rem;
+    border-radius: 17px;
+    background-color: white;
+    color: black;
+    border: 1px solid #76767698 !important;
+    transition: all .2s ease-in-out;
+}
+.addnewbook-form_img input:hover{
+    bottom: 198px;
+    box-shadow: 0px 2px 2px #9d9c9c;
+}
+/* thẻ input */
+.addnewbook-form_info{
+    width: 32%;
+}
+.addnewbook-form_info div{
+    margin-top: 13px;
+    position: relative;
+}
+.addnewbook-form_info div:nth-child(1){
+    margin-top: 0;
+}
+.addnewbook-form_info label,
+.addnewbook-form_info input,
+.addnewbook-form_info select,
+.addnewbook-form_longinp1 input,
+.addnewbook-form_longinp1 label,
+.addnewbook-form_longinp2 label,
+.addnewbook-form_longinp2 input{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.addnewbook-form_info input,
+.addnewbook-form_info select,
+.addnewbook-form_longinp1 input{
+    border-radius: 4px;
+    width: 95%;
+    height: 38px;
+    margin-top: 7px;
+    color: #757B82;
+    outline: none;
+    padding-left: 12px;
+}
+
+.addnewbook-form_info span{
+    color: red;
+    position: absolute;
+    right: 15px;
+    font-size: 1.2rem;
+}
+
+.addnewbook-form_longinp2 label{
+    background-color: white !important;
+    padding-bottom: 6px;
+}
+
+.addnewbook-form_longinp2{
+    margin-top: -15px !important;
+}
+
+.addnewbook-form_longinp2 textarea{
+    border-radius: 4px;
+    width: 538px;
+    height: 100px;
+    margin-top: 3px;
+    color: #757B82;
+    outline: none;
+    padding-left: 12px;
+    font-size: 1.6rem;
+}
+.addnewbook-form_longinp2 span{
+    position: absolute;
+    margin-top: -3px;
+}
+.addnewbook-form_info span,
+.addnewbook-form_longinp1 span,
+.addnewbook-form_longinp2 span{
+    font-weight: 400;
+}
+.addnewbook-form_longinp1,
+.addnewbook-form_longinp2{
+    position: absolute;
+    bottom: 155px;
+    left: 304px;
+}
+.addnewbook-form_longinp2{
+    bottom: 78px;;
+}
+.addnewbook-form_longinp1 input,
+.addnewbook-form_longinp2 input{
+    width: 540px;
+}
+.addnewbook-form_btn{
+    position: absolute;
+    bottom: 15px;
+    left: 304px;
+    width: 540px;
+    display: flex;
+    justify-content: space-between;
+}
+.addnewbook-form_btn button{
+    width: 45%;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 40px;
+    transition: all .2s ease-in-out;
+}
+.addnewbook-form_btn button:nth-child(1){
+    background-color: #c4c4c947;
+    color: #757B82;
+    border: 1.5px solid #757B82 !important;
+}
+.addnewbook-form_btn button:nth-child(2){
+    background-color: #5065F6;
+    color: #fff;
+    border: 1.5px solid #5065F6 !important;
+}
+.addnewbook-form_btn button:hover{
+    box-shadow: 0 2px 2px #ccc;
+}
+/* thông báo */
+.addnewbook-form_note{
+    width: 270px;
+    position: absolute;
+    bottom: 3px;
+    left: 20px;
+    font-size: 1.3rem;
+}
+.dp-none{
+    display: none;
+}
+
+@keyframes identifier {
+    from{
+        opacity: 0;
+        margin-top: 20px;
+    }to{
+        opacity: 1;
+        margin-top: 10px;
+    }
+}
+
+/* *==================================================== */
+/* * Order Form */
+
+.order-form {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 700px; /* Chiều cao tối đa */
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 800px;
+    transform: translate(-63%);
+    animation: identifier 0.5s ease-in-out forwards;
+    overflow-y: auto; 
+    position: absolute; 
+    /* z-index: 10000000000;  */
+}
+
+
+/* table */
+
+.order-form table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.order-form table tbody{
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #cccccc84;
+    border-bottom: 1px solid #cccccc84;
+}
+.order-form table th,
+.order-form table td{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.order-form table th{
+    color: #00000088;
+}
+.order-form_tbody__row{
+    width: 100%;
+    height: 66.2px;
+    border-top: 1px solid #cccccc84;
+    border-bottom: 1px solid #cccccc84;
+}
+
+.order-form_img{
+    width: 40px;
+    height: 57px;
+    object-fit: contain;
+}
+
+.order-form table thead {
+    display: table; /* Giữ thead như table để căn chỉnh với tbody */
+    width: 100%; /* Giữ chiều rộng khớp với table */
+    table-layout: fixed; /* Cố định chiều rộng các cột */
+}
+
+.order-form table tbody tr {
+    display: table; /* Hiển thị các hàng trong tbody */
+    width: 100%; /* Đảm bảo hàng chiếm 100% chiều rộng của tbody */
+    table-layout: inherit; /* Sử dụng layout từ table */
+}
+/* *thông tin khách hàng */
+.order-form_info{
+    font-size: 1.6rem;
+}
+
+/* * 3 nút */
+.order-form_button{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 17px;
+}
+.order-form_button button{
+    width: 200px;
+    height: 42px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 10px;
+    color: white;
+}
+.order-form_button button:nth-child(1){
+    background-color: rgb(221, 52, 52);
+}
+.order-form_button button:nth-child(2){
+    background-color: rgb(6, 177, 6);
+}
+.order-form_button button:nth-child(3){
+    background-color: rgb(6, 6, 209);
+}
+
+/** Print Bill */
+.print-bill{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 700px; /* Chiều cao tối đa */
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 400px;
+    transform: translate(-75%);
+    animation: identifier 0.5s ease-in-out forwards;
+    position: absolute;
+}
+
+.print-bill_header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed rgb(164, 164, 164);
+}
+.print-bill_header img{
+    width: 34px;
+    height: 34px;
+}
+.print-bill_header p{
+    font-size: 1.5rem;
+    margin-top: 6px;
+    color: gray;
+}
+
+.print-bill_ship{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.print-bill_people{
+    margin-top: 8px;
+    font-size: 1.4rem;
+    border-bottom: 1px dashed rgb(164, 164, 164);
+}
+
+.print-bill_people p:nth-child(2){
+    margin-top: -9px;
+    font-weight: 400;
+}
+
+.print-bill_people span{
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.print-bill_people strong{
+    font-size: 1.6rem;
+    display: block;
+    margin-top: -10px ;
+}
+
+.print-bill_mess{
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 1px dashed rgb(164, 164, 164);
+}
+
+.print-bill_info {
+    font-size: 1.4rem;
+    border-bottom: 1px dashed rgb(164, 164, 164);
+}
+
+.print-bill_info h4{
+    color: gray !important;
+}
+
+.print-bill_info--title{
+    border-bottom: 1px dashed rgb(164, 164, 164);
+}
+
+.print-bill_info--title > div:nth-child(1){
+    background-color: #5065F6;
+    border-radius: 7px;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.print-bill_info--title > div:nth-child(2){
+    height: 87px;
+    overflow-y: auto;
+}
+
+.print-bill_info--title > div > div{
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    border-bottom: 1px dashed rgba(164, 164, 164, 0.259);
+}
+
+.print-bill_info--title > div > div p:nth-child(2),
+.print-bill_info--title > div > div p:nth-child(3){
+    line-height: 44px;
+}
+
+.print-bill_total{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0
+}
+.print-bill_total--title{
+    width: 50%;
+    margin-left: 60px;
+}
+.print-bill_total--price{
+    width: 50%;
+    text-align: right;
+    margin-right: 40px;
+}
+.tks{
+    text-align: center;
+    margin-top: 7px;
+}
+
+.print-bill_btn{
+    width: 110%;
+    margin-left: -19px;
+    border-top: 1.5px dashed #ccc;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.print-bill_btn button{
+    margin-top: 20px;
+    width: 170px;
+    height: 42px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 10px;
+    color: white;
+}
+
+.print-bill_btn button:nth-child(1){
+    background-color: black;
+    color: #fff;
+    font-weight: 500;
+}
+.print-bill_btn button:nth-child(2){
+    background-color: #5065F6;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* * FORM VOUCHER */
+
+.voucher-form{
+    /* background-color: black; */
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 700px;
+    height: 700px;
+    transform: translate(-63%);
+    animation: identifier .5s ease-in-out forwards;
+}
+.voucher-form_info{
+    width: 690px;
+    height: 700px;
+    color: #fff;
+    position: relative;
+}
+.voucher-form_info img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    z-index: 0;
+}
+.voucher-form_info--date,
+.voucher-form_info--name,
+.voucher-form_info--id,
+.voucher-form_info--if,
+.voucher-form_info--if2,
+.voucher-form_info--price{
+    font-size: 2.2rem;
+    line-height: 36px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    z-index: 1000;
+    text-transform: uppercase;
+}
+.voucher-form_info--date{
+    position: absolute; 
+    top: 43px;
+    left: -15px;
+    width: 200px;
+    text-align: center;
+    font-family: 'MadimiOne', sans-serif;
+}
+.voucher-form_info--name{
+    position: absolute; 
+    top: 105px;
+    left: 15px;
+    width: 305px;
+    font-size: 3.2rem;
+    /* color: #33CC99 !important; */
+    text-align: center;
+    font-family: 'MarkoOne', sans-serif;
+}
+
+.voucher-form_info--id{
+    position: absolute; 
+    top: 205px;
+    left: 15px;
+    width: 305px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'ABeeZee', sans-serif;
+    text-transform: uppercase;
+}
+.voucher-form_info--if{
+    position: absolute; 
+    top: 212px;
+    right: 8px;
+    width: 305px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'Mali', sans-serif;
+}
+
+.voucher-form_info--if2{
+    position: absolute; 
+    top: 235px;
+    right: 8px;
+    width: 305px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'Mali', sans-serif;
+}
+.voucher-form_info--price{
+    position: absolute; 
+    top: 135px;
+    right: 47px;
+    width: 250px;
+    font-size: 9rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'MadimiOne', sans-serif;
+}
+/* *form */
+.voucher-info{
+    position: absolute;
+    top: 290px;
+    margin-left: 3px;
+    background-color: #fff;
+    width: 687px;
+    border-radius: 10px;
+    height: auto;
+    padding: 0  20px;
+}
+.voucher-header_title{
+    position: absolute;
+}
+.btnOnClose{
+    position: absolute;
+    top: 0;
+    right: -40px;
+    padding: 7px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.voucher-info_form--item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+.voucher-info_form--item > div{
+    width: 46%;
+    position: relative;
+}
+.voucher-info_form--item > div > label{
+    display: block !important;
+    margin: 20px 0 7px 0;
+}
+.voucher-info_form--item > div > input{
+    width: 100%;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    
+}
+.voucher-info_form--item > div > span{
+    color: red;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+/* ================= */
+.voucher-info_form--item:nth-child(3) > div{
+    width: 50%;
+}
+.item-update > div > label{
+    display: block !important;
+    margin: 20px 0 7px 0;
+}
+.item-update > div:nth-child(1) > input{
+    border-radius: 0;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    text-align: center;
+}
+.item-update > div:nth-child(2) > input{
+    border-radius: 0;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    margin-top: 49.5px;
+    text-align: center;
+}
+/* * btn voucher */
+.voucher-info_btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+.voucher-info_btn button{
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0;
+    width: 270px;
+    font-size: 2rem;
+    transition: all 0.2s ease;
+}
+.voucher-info_btn button:nth-child(1){
+    color: black;
+}
+.voucher-info_btn button:nth-child(2){
+    background-color: #33CC99;
+}
+.voucher-info_btn button:hover{
+    filter: brightness(0.8);
+}
+.voucher-info_btn--del{
+    background-color: #e73d3d;
+    color: #fff !important;
+}
+.v-update{
+    color: #F7755F !important;
+}
+.v-btn_update{
+    background-color: #F7755F !important;
+}
+
+.text_conhan{
+    color: #33CC99 !important;
+}
+.text_hethan{
+    color: #F7755F !important;
+}
+.text_chuaapdung{
+    color: #eab432 !important;
+}
+.bg_conhan{
+    background-color: #33CC99 !important;
+}
+.bg_hethan{
+    background-color: #F7755F !important;
+}
+.bg_chuaapdung{
+    background-color: #eab432 !important;
+}
+
+.bd_error{
+    border: 1.5px solid red !important;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.184) !important;
+}
