@@ -1,0 +1,244 @@
+/* ProductDetail.css */
+
+.product-detail {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.product-main-info {
+    display: flex;
+    gap: 20px;
+}
+
+.product-imageCart {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.product-info {
+    max-width: 1200px;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-author {
+    font-size: 18px;
+    color: #888;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 28px;
+    color: #d9534f;
+    margin: 10px 0;
+}
+
+.product-status, .product-category, .contact-info, .shipping-info {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity-control input {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn {
+    background-color: #0275d8;
+}
+
+.buy-now-btn {
+    background-color: #d9534f;
+}
+
+.product-details-section {
+    margin-top: 20px;
+}
+
+.product-details-section h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-details-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.shop-info {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.shop-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.shop-join-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.product-description {
+    margin-top: 20px;
+}
+
+.product-description h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Phần đánh giá sản phẩm */
+.product-reviews {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.product-reviews h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.review-user {
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.review-time {
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+}
+
+.review-content {
+    margin: 5px 0;
+    color: #555;
+}
+
+.review-actions span {
+    color: #1a73e8;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* Phần sản phẩm cùng loại */
+.related-products {
+    margin-top: 30px;
+    overflow: hidden; /* Ẩn overflow để không hiển thị thanh cuộn không cần thiết */
+}
+
+.related-products h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.related-products-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Cho phép cuộn ngang khi cần */
+    padding: 10px 0;
+    scrollbar-width: thin; /* Tinh chỉnh thanh cuộn để trông gọn gàng */
+}
+
+.related-product-card {
+    flex: 0 0 220px; /* Đặt chiều rộng cố định cho mỗi thẻ sản phẩm */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.related-product-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng hover để nhấc thẻ sản phẩm lên */
+}
+
+.product-image-placeholder img {
+    width: 100%;
+    height: 200px; /* Đặt chiều cao cố định để hình ảnh không bị méo */
+    object-fit: cover; /* Đảm bảo hình ảnh được cắt gọn mà không bị biến dạng */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.related-product-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.related-product-price {
+    font-size: 14px;
+    color: #d9534f;
+}
+td{
+    font-size: 14px;
+}

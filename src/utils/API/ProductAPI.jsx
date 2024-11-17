@@ -109,3 +109,32 @@ export const getCountBooksAll = () => {
 }
 
 // *======================================= Hàm lấy số lượng - end ===========================================
+export const getAllBook = () =>{
+    return axios.get(`http://localhost:8080/api/v1/product/allinfo`)
+    .then(res =>{
+        return res.data;
+    })
+    .catch(err =>{
+        console.error(err)
+    })
+}
+
+export const getBookByID = async (idProduct) => {
+         const response = await axios.get(`http://localhost:8080/api/v1/product/cuahang-21/${idProduct}`);
+        return response.data;
+   
+}
+export const searchProducts = async (searchTerm, storeId) => {
+    try {
+        const response = await axios.get(`http://localhost:8080/api/v1/product/cuahang-21/tim-kiem/tensanpham`, {
+            params: {
+                ma_cua_hang: storeId,
+                ten: searchTerm
+            }
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Lỗi khi tìm kiếm sản phẩm:", error);
+        return []; // Trả về mảng rỗng nếu có lỗi
+    }
+};

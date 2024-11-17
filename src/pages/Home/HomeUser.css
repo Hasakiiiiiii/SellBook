@@ -1,0 +1,41 @@
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a,
+.dropdown-menu span {
+    display: block;
+    padding: 8px 16px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown-menu span:hover,
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}

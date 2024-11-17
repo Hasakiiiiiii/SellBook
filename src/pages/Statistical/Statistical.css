@@ -8,12 +8,12 @@
 }
 
 .payment-method{
-    margin-top: 220px;
+    /* margin-top: 220px; */
     width: 100%;
-    height: 230px;
+    /* height: 230px; */
     background-color: white;
     box-shadow: 0 0 10px rgba(104, 104, 104, 0.347);
-    padding: 23px;
+    /* padding: 23px; */
     border-radius: 6px;
 }
 
@@ -21,14 +21,14 @@
     text-align: center;
     font-size: 1.7rem;
 }
-
+/* 
 .payment-method div{
     display: flex;
     align-items: center;
     font-size: 1.9rem;
     color: #666666;
     margin-top: 20px;
-}
+} */
 
 .icon-payment{
     color: #00C047 !important;

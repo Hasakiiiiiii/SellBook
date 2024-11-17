@@ -16,19 +16,49 @@ import BestSellingProducts from './pages/Statistical/BestSellingProducts';
 import OrderStatistics from './pages/Statistical/OrderStatistics';
 import RevenueStatistics from './pages/Statistical/RevenueStatistics';
 import TransactionHistory from './pages/TransactionHistory/TransactionHistory';
-// import Menu from './Menu/Menu';
+import HomeUser from './pages/Home/HomeUser';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
+import Register from './pages/Login/Register';
+import Login from './pages/Login/SignIn';
+import ShoppingCart from './pages/Cart/HomeCart';
+import CheckOut from './pages/Cart/CheckOut';
+import ResetPassword from './pages/Login/ForgotPass';
+import ProfileUser from './pages/ProfileUser/ProfileUser';
+import AddressUser from './pages/ProfileUser/AddressUser';
+import ChangePassword from './pages/ProfileUser/ChangePass';
+import DonHang from './pages/Cart/Donhang';
+import RegisterSeller from './pages/Seller/ResgisterSeller';
+import RechargeForm from './pages/Wallet/wallet';
+import { CartProvider } from './context/cartContext';
 
 
 function App() {
   return (
-    <Router>
+    <CartProvider>
+      <Router>
       <div>
-        <Header />
+        {/* <Header /> */}
         <div style={{ display: 'flex' }}>
-          <Sidebar />
+          {/* <Sidebar /> */}
           <div style={contentStyle}>
             <Routes>  
               <Route path="/" element={<Home />} />
+              <Route path="/HomeUser" element={<HomeUser />} />
+              <Route path='/shopping' element={<ShoppingCart />} />
+              <Route path='/checkout' element={<CheckOut />} />
+              <Route path="/ProductDetail/:id" element={<ProductDetail />} />
+              <Route path='/Register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/profile-user' element={<ProfileUser />} />
+              <Route path='/address' element={<AddressUser />} />
+              <Route path='/change-pass' element={<ChangePassword />} />
+              <Route path='/donhang' element={<DonHang />} />
+              <Route path='/seller' element={<RegisterSeller />} />
+              <Route path='/wallet' element={<RechargeForm />} />
+
+
+
+              <Route path='/forgot-password' element={<ResetPassword />} />
               {/* <Route path="/information-store" element={<InformationOfStore />}/> */}
               <Route path="/manage-product-store" element={<ManageProduct />} />
               <Route path="orders-new" element={<ManagerOrderNew />} />
@@ -45,11 +75,13 @@ function App() {
         </div>
       </div>
     </Router>
+    </CartProvider>
     // <div className="App">
     //   <Menu />
     // </div>
   );
 }
+
 
 const contentStyle = {
   marginLeft: '130px',
